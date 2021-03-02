@@ -15,4 +15,4 @@ pipelines:
         execution:
           onExecute:
             - local pagerDutyIntegrationName=$(get_integration_name --type "PagerDuty")
-            - send_notification "$pagerDutyIntegrationName" --routingkey "8c22b13ccaa04da79a9952761248c337"
+            - send_notification "pagerduty" --routingkey "4487624416f4464e9fa918db35faf2c3"
