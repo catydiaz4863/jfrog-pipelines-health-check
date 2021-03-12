@@ -2,8 +2,8 @@ resources:
   - name: pagerDutyCheckRepo
     type: GitRepo
     configuration:
-      gitProvider: JohnpGithub
-      path: peters95/jfrog-pipelines-health-check
+      gitProvider: Pdgithub
+      path: catydiaz4863/jfrog-pipelines-health-check
 pipelines:
   - name: pipeline_pagerduty_check
     steps:
