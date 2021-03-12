@@ -14,4 +14,4 @@ pipelines:
             - name: pagerDutyCheckRepo
         execution:
           onExecute:
-            - send_notification "pagerduty" --routingkey "4487624416f4464e9fa918db35faf2c3"
+            - send_notification "Pdgithub" --routingkey "4487624416f4464e9fa918db35faf2c3"
