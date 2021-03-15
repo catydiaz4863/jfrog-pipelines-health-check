@@ -5,13 +5,15 @@ resources:
       gitProvider: Pdgithub
       path: catydiaz4863/jfrog-pipelines-health-check
 pipelines:
-  - name: pipeline_pagerduty_check
-    steps:
-      - name: pagerduty_check
-        type: Bash
-        configuration:
-          inputResources:
-            - name: pagerDutyCheckRepo
-        execution:
-          onExecute:
-            - send_notification "pdtestint" --routingkey "4487624416f4464e9fa918db35faf2c3"
+ name: pipeline_pagerduty_check
+steps:
+  - name: pagerduty_check
+    type: Bash
+    configuration:
+      integrations:
+        - name: pdtestint
+      inputResources:
+        - name: pagerDutyCheckRepo
+    execution:
+      onExecute:
+        - send_notification pdtestint --routingkey 4487624416f4464e9fa918db35faf2c3 --text "Hello world"
